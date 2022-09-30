@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/98a50fb53a.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body class="bg-black d-flex flex-column align-items-center mt-5 gap-5">
+    <h2 class="display-5 text-white fw-bold text-center">Store Portal</h1>
+    <main class="container-xxl grid justify-content-between">
+
+    <div class="container-xsm d-flex flex-column gap-5 justify-content-center align-items-center bg-secondary rounded-3 g-col-3 py-4 px-2">
+        <h2 class="text-white text-center">Filters</h2>
+        <div class="selection-bar">
+            <div class="selection-value" sel="true">
+                <p>Category</p>
+            </div>
+            <div class="selection-value" sel="false">
+                <p>ID</p>
+            </div>
+            <div class="indicator"></div>
+        </div>
+        <form class="filter-form d-flex flex-column gap-5">
+            <input type="text" class="form-control" placeholder="Enter filter name">
+            <input type="hidden" name="selection-type" id="selection-type" value="Category">
+            <button type="button" class="btn btn-primary filter-submit">Add Filter</button>
+        </form>
+    </div>
+    <div
+        class="container-xsm d-flex flex-column gap-4 align-items-center bg-secondary rounded-3 p-3 g-col-8 g-start-5">
+    <h2 class="text-white text-center">All Products</h2>
+    <div class="container-xsm fw-semibold text-white grid text-left p-2" style="width:85%;">
+        <p class="g-col-2">Name</p>
+        <p class="g-col-2">Category</p>
+        <p class="g-col-2">Description</p>
+        <p class="g-col-2">Price<span class="price-filter px-2"><i class="link-primary fa-solid fa-chevron-down chevron-filter"></i></span></p>
+        <p class="g-col-2">Rating</p>
+        <p class="g-col-2">Actions</p>
+    </div>
+    <div class="container-xsm fw-normal grid text-left bg-white rounded-2 p-2" style="width:85%;">
+        <p class="g-col-2">RTX 3090</p>
+    <p class="g-col-2">GPU</p>
+    <p class="g-col-2">Its a good GPU</p>
+    <p class="g-col-2">1400</p>
+    <p class="g-col-2">4.5</p>
+    <div class="g-col-2 d-flex gap-3">
+        <i class="link-danger fa-solid fa-trash"></i>
+        <i class="link-primary fa-solid fa-pen-to-square"></i>
+</div>
+</div>
+    </div>
+</main>
+<button class="btn btn-primary py-3" style="padding-inline: 5rem;width:max-content;">Add Product</button>
+    <script src="index.js"></script>
+</body>
+</html>

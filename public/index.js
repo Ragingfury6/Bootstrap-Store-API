@@ -1,4 +1,6 @@
 let filterRadioButtons = document.querySelectorAll('.selection-value');
+let addProductButton = document.querySelector('.add-product');
+let dialog = document.querySelector('dialog');
 
 filterRadioButtons.forEach((b) => {
   b.addEventListener('click', () => {
@@ -8,6 +10,10 @@ filterRadioButtons.forEach((b) => {
   });
 });
 
+addProductButton.addEventListener('click', () => {
+  dialog.style.setProperty('display', 'block');
+  dialog.showModal();
+});
 // let priceFilter = document.querySelector('.price-filter');
 // let filterType = 'desc';
 // let filterElements = [

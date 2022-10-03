@@ -9,19 +9,39 @@
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body class="bg-black d-flex flex-column align-items-center mt-5 gap-5">
+    <dialog class="dialog bg-secondary rounded-2 text-white text-center embed-responsive-1by1">
+        <div class="card__banner p-2 bg-primary fw-bold rounded-2 w-100">Enter Product Information</div>
+        <form class="changeTaskForm p-4 gap-4 grid">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" maxlength="25" />
+            <label for="description">Description</label>
+            <textarea type="text" id="description" rows="3" cols="8" name="description" maxlength="100"
+                style="resize: none"></textarea>
+            <label for="category">Category</label>
+            <input type="text" id="category" name="category" maxlength="25" />
+            <label for="price">Price</label>
+            <input type="text" id="price" name="price" maxlength="25" />
+            <label for="rating">Rating</label>
+            <input type="number" id="rating" name="rating" min="1" max="5" />
+            <button type="submit" class="btn btn-primary" id="changeTaskFormSubmit" data-type="POST">Submit</button>
+            <button type="submit" class="btn btn-primary d-none" id="formSubmit" data-type="PUT">
+                Submit
+            </button>
+        </form>
+    </dialog>
     <h2 class="display-5 text-white fw-bold text-center">Store Portal</h1>
     <main class="container-xxl grid justify-content-between">
 
     <div class="container-xsm d-flex flex-column gap-5 justify-content-center align-items-center bg-secondary rounded-3 g-col-3 py-4 px-2">
         <h2 class="text-white text-center">Filters</h2>
-        <div class="selection-bar">
+        <div class="selection-bar w-75 grid text-center position-relative">
             <div class="selection-value" sel="true">
                 <p>Category</p>
             </div>
             <div class="selection-value" sel="false">
                 <p>ID</p>
             </div>
-            <div class="indicator"></div>
+            <div class="indicator position-absolute w-50 h-100 bg-primary "></div>
         </div>
         <form class="filter-form d-flex flex-column gap-5">
             <input type="text" class="form-control" placeholder="Enter filter name">
@@ -47,13 +67,13 @@
     <p class="g-col-2">1400</p>
     <p class="g-col-2">4.5</p>
     <div class="g-col-2 d-flex gap-3">
-        <i class="link-danger fa-solid fa-trash"></i>
-        <i class="link-primary fa-solid fa-pen-to-square"></i>
+        <i class="link-danger fa-solid fa-trash align-self-start"></i>
+        <i class="link-primary fa-solid fa-pen-to-square align-self-start"></i>
 </div>
 </div>
     </div>
 </main>
-<button class="btn btn-primary py-3" style="padding-inline: 5rem;width:max-content;">Add Product</button>
+<button class="btn btn-primary py-3 add-product border-0" style="padding-inline: 5rem;width:max-content;">Add Product</button>
     <script src="index.js"></script>
 </body>
 </html>
